@@ -1,0 +1,37 @@
+# Built APK/AAB files
+*.apk
+*.aab
+*.ap_
+
+# Java/Kotlin build
+*.iml
+*.class
+*.jar
+*.log
+
+# Android Studio
+.idea/
+*.iml
+local.properties
+captures/
+
+# Gradle
+.gradle/
+build/
+app/build/
+
+# Native build
+.cxx/
+.externalNativeBuild/
+app/.cxx/
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Release signing
+app/release/
+*.keystore
+*.jks
