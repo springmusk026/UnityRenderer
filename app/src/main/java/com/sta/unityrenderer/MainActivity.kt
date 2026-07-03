@@ -15,20 +15,33 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Example of a call to a native method
-        binding.sampleText.text = stringFromJNI()
+        binding.sampleText.text = buildString {
+            appendLine("UnityRenderer - Native Unity UI Framework")
+            appendLine("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+            appendLine()
+            appendLine("📋 Status: Library Loaded")
+            appendLine("🏗️ Architecture: ${System.getProperty("os.arch")}")
+            appendLine("📱 Android: ${android.os.Build.VERSION.RELEASE} (API ${android.os.Build.VERSION.SDK_INT})")
+            appendLine("📦 Package: ${packageName}")
+            appendLine()
+            appendLine("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+            appendLine("This is an educational project demonstrating")
+            appendLine("IL2CPP runtime interaction from native C++.")
+            appendLine()
+            appendLine("Features:")
+            appendLine("• Hook-free UI creation via il2cpp_thread_attach")
+            appendLine("• Modular widget system (Toggle, SeekBar, Checkbox)")
+            appendLine("• Touch input with drag-to-move panel")
+            appendLine("• OOP architecture with RAII memory management")
+            appendLine()
+            appendLine("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+            appendLine("🔗 github.com/springmusk026/UnityRenderer")
+        }
     }
 
-    /**
-     * A native method that is implemented by the 'unityrenderer' native library,
-     * which is packaged with this application.
-     */
-    external fun stringFromJNI(): String
-
     companion object {
-        // Used to load the 'unityrenderer' library on application startup.
         init {
-            System.loadLibrary("unityrenderer")
+            System.loadLibrary("main")
         }
     }
 }
