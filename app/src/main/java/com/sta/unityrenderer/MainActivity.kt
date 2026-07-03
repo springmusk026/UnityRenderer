@@ -39,9 +39,4 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    companion object {
-        init {
-            System.loadLibrary("main")
-        }
-    }
 }
