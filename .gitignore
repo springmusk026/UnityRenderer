@@ -6,8 +6,10 @@
 # Java/Kotlin build
 *.iml
 *.class
-*.jar
 *.log
+
+# Keep gradle wrapper jar
+!gradle/wrapper/gradle-wrapper.jar
 
 # Android Studio
 .idea/
