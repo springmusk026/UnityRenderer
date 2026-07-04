@@ -24,7 +24,7 @@ project("main")
 # System.loadLibrary() and pass the name of the library defined here;
 # for GameActivity/NativeActivity derived applications, the same library name must be
 
-find_package(Dobby REQUIRED CONFIG)
+find_package(dobby REQUIRED CONFIG)
 
 # Include directories
 include_directories(prefab/modules/dobby/include)
